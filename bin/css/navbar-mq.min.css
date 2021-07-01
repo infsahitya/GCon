@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'hero-font';
+  src: url(../../../fonts/hero-font/SportypoReguler-OVGwe.ttf);
+}
+
+@font-face {
+  font-family: 'head-font-normal';
+  src: url(../../../fonts/heading-font/MaldiniNormal-ZVKG3.ttf);
+}
+
+@font-face {
+  font-family: 'head-font-style';
+  src: url(../../../fonts/heading-font/MaldiniStyle-3zOwp.ttf);
+}
+
+@font-face {
+  font-family: 'txt-font';
+  src: url(../../../fonts/txt-font/gasalt.black.ttf);
+}
+
+@font-face {
+  font-family: 'title-font';
+  src: url(../../../fonts/title-font/BigSpace-rPKx.ttf);
+}
+
+/*---------Colors----------*/
+/*---------Colors----------*/
+/*---------Breakpoints----------*/
+/*---------Breakpoints----------*/

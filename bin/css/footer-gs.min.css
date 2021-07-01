@@ -1,0 +1,254 @@
+/*---------Colors----------*/
+/*---------Colors----------*/
+/*---------Breakpoints----------*/
+/*---------Breakpoints----------*/
+@font-face {
+  font-family: 'hero-font';
+  src: url(../../../fonts/hero-font/SportypoReguler-OVGwe.ttf);
+}
+
+@font-face {
+  font-family: 'head-font-normal';
+  src: url(../../../fonts/heading-font/MaldiniNormal-ZVKG3.ttf);
+}
+
+@font-face {
+  font-family: 'head-font-style';
+  src: url(../../../fonts/heading-font/MaldiniStyle-3zOwp.ttf);
+}
+
+@font-face {
+  font-family: 'txt-font';
+  src: url(../../../fonts/txt-font/gasalt.black.ttf);
+}
+
+@font-face {
+  font-family: 'title-font';
+  src: url(../../../fonts/title-font/BigSpace-rPKx.ttf);
+}
+
+@-webkit-keyframes bannernews {
+  0% {
+    color: #fff;
+  }
+  50% {
+    color: #e9275b;
+  }
+  100% {
+    color: #fff;
+  }
+}
+
+@keyframes bannernews {
+  0% {
+    color: #fff;
+  }
+  50% {
+    color: #e9275b;
+  }
+  100% {
+    color: #fff;
+  }
+}
+
+@-webkit-keyframes hero-play-btn-animate {
+  from {
+    width: calc(4em - 3px);
+    height: calc(4em - 3px);
+  }
+  to {
+    width: calc(5.5em + 3px);
+    height: calc(5.5em + 3px);
+  }
+}
+
+@keyframes hero-play-btn-animate {
+  from {
+    width: calc(4em - 3px);
+    height: calc(4em - 3px);
+  }
+  to {
+    width: calc(5.5em + 3px);
+    height: calc(5.5em + 3px);
+  }
+}
+
+@font-face {
+  font-family: 'hero-font';
+  src: url(../../../fonts/hero-font/SportypoReguler-OVGwe.ttf);
+}
+
+@font-face {
+  font-family: 'head-font-normal';
+  src: url(../../../fonts/heading-font/MaldiniNormal-ZVKG3.ttf);
+}
+
+@font-face {
+  font-family: 'head-font-style';
+  src: url(../../../fonts/heading-font/MaldiniStyle-3zOwp.ttf);
+}
+
+@font-face {
+  font-family: 'txt-font';
+  src: url(../../../fonts/txt-font/gasalt.black.ttf);
+}
+
+@font-face {
+  font-family: 'title-font';
+  src: url(../../../fonts/title-font/BigSpace-rPKx.ttf);
+}
+
+/*---------Colors----------*/
+/*---------Colors----------*/
+/*---------Breakpoints----------*/
+/*---------Breakpoints----------*/
+.footer {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+}
+
+.footer .subscribe {
+  position: relative;
+  width: 100%;
+  padding: 4em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  background-color: #0d001a;
+  color: #fff;
+  font-family: 'txt-font';
+}
+
+.footer .subscribe h2 {
+  font-size: 3em;
+  color: #00d9ff;
+}
+
+.footer .subscribe h4 {
+  margin-top: -0.5em;
+  color: #f44d9b;
+  font-size: 1.8em;
+}
+
+.footer .subscribe form {
+  position: relative;
+  width: 30em;
+  margin-top: 1em;
+  background-color: #fff;
+  border-radius: 25px;
+  padding: 0.3em;
+}
+
+.footer .subscribe form .input-area {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+}
+
+.footer .subscribe form .input-area input[type="email"] {
+  width: 75%;
+  padding: 0.6em 1em;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  font-size: 1.1em;
+}
+
+.footer .subscribe form .input-area input[type="submit"] {
+  width: 25%;
+  border-radius: 20px;
+  background-color: #f44d9b;
+  border: none;
+  outline: none;
+  padding: 0.6em 0.7em;
+  color: #fff;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+
+.footer .logo {
+  position: relative;
+  width: 100%;
+  padding: 3em 0;
+  background-color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+}
+
+.footer .logo h1 {
+  font-family: 'title-font';
+  font-size: 7em;
+  color: #fff;
+}
+
+.footer .copyright {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  background-color: #000;
+  padding-bottom: 2em;
+  color: #cccccc;
+  font-family: 'txt-font';
+}
+
+.footer .copyright a {
+  text-decoration: none;
+  color: #00d9ff;
+}
