@@ -5,7 +5,7 @@
 .events{
     @include contdivstyle;
     @include flex(center, center, column);
-    background-image: linear-gradient(to right, rgba(#000, 1), rgba(#000, 0.5)), url("../../../img/events/background.jpg");
+    background-image: linear-gradient(to right, rgba(#000, 1), rgba(#000, 0.5)), url("../../assets/img/events/background.jpg");
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
