@@ -1,0 +1,104 @@
+@import "../animations";
+@import "../mixins";
+@import "../vars";
+
+.events{
+    @include contdivstyle;
+    @include flex(center, center, column);
+    background-image: linear-gradient(to right, rgba(#000, 1), rgba(#000, 0.5)), url("../../../img/events/background.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .intro{
+        @include introstyle;
+    }
+
+    .splide{
+        width: 100%;
+        padding: 0 1em;
+
+        .splide__arrows{
+            .splide__arrow{
+                width: 3em !important;
+                height: 3em !important;
+                border-radius: 10px;
+                background-color: $blue-neon;
+                color: #fff;
+                transition: all 0.3s ease;
+
+                svg{
+                    font-size: 1.5em;
+                }
+            }
+        }
+        .splide__pagination{
+            position: relative;
+            bottom: 0;
+            margin-top: 0.5em;
+
+            .splide__pagination__page{
+                background-color: #fff;
+            }
+            .splide__pagination__page.is-active{
+               background-color: $blue-neon;
+            }
+        }
+
+        .splide__track{
+            padding: 1em 0;
+
+            .splide__list{
+                .splide__slide{
+                    width: 18em !important;
+                    @include flex(center, center, column);
+                    background-color: #000;
+                    color: #fff;
+                    padding: 1.5em;
+                    border-radius: 10px;
+                    box-shadow: 0 0 2px 0 rgba(#fff, 0.5);
+                    margin: 0 1em;
+            
+                    .img-holder{
+                        position: relative;
+                        width: 100%;
+            
+                        img{
+                            width: 100%;
+                            object-fit: cover;
+                            border-radius: 10px;
+                        }
+                    }
+                    .info{
+                        @include flex(flex-start, center, column);
+                        padding-top: 10px;
+                        @include txtfont;
+                        font-size: 1.2em;
+            
+                        h2{
+                            color: $blue-neon;
+                        }
+                        h4{
+                            margin-bottom: 10px;
+                            a{
+                                text-decoration: none;
+                                color: $pink-neon;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .join-event{
+        @include btnstyle;
+        border-color: $pink-neon;
+        margin-top: 1em;
+
+        &:hover{
+            background-color: rgba($pink-neon, 0.3);
+        }
+    }
+}

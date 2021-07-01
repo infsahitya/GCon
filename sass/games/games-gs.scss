@@ -1,0 +1,105 @@
+@import "../animations";
+@import "../mixins";
+@import "../vars";
+
+.games{
+    @include contdivstyle;
+    @include flex(center, center, column);
+    background-color: $purple-dark;
+
+    .intro{
+        @include introstyle;
+    }
+
+    .cards-container{
+        @include contdivstyle;
+        @include flex(center, center);
+        gap: 1.5em;
+        padding: 0 3.5em;
+
+        .card{
+            position: relative;
+            overflow: hidden;
+            width: 23em;
+            height: 18em;
+            border-radius: 10px;
+            cursor: pointer;
+            border: 5px solid rgba(#fff, 0.9);
+            box-shadow: none;
+            transition: all 0.5s ease;
+    
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 6px;
+                transition: all 0.5s ease;
+            }
+    
+            .cover{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                border-radius: 6px;
+                padding: 0 2em;
+                opacity: 0;
+                transition: all 0.5s ease;
+    
+                h1{
+                    position: absolute;
+                    bottom: 0;
+                    @include headfontnormal;
+                    font-size: 2.5em;
+                    text-shadow: 0 3px 5px rgba(#000, 0.5);
+                    transition: all 0.5s ease;
+                }
+            }
+
+            &:hover{
+                box-shadow: 1px 1px 5px 0 rgba($blue-neon, 0.9),
+                            -1px -1px 5px 0 rgba($pink-neon, 0.9),
+                            -1px 1px 5px 0 rgba(#7a93cd, 0.5),
+                            1px -1px 5px 0 rgba(#7a93cd, 0.5);
+                border-color: #fff;
+                img{
+                    transform: scale(1.07);
+                }
+                .cover{
+                    opacity: 1;
+                    h1{
+                        bottom: 0.5em;
+                    }
+                }
+            }
+
+            &:nth-child(1) .cover{
+                background-image: linear-gradient(to top, rgba(#0080ff, 0.7), transparent);
+            }
+
+            &:nth-child(2) .cover{
+                background-image: linear-gradient(to top, rgba(#993333, 0.7), transparent);
+            }
+
+            &:nth-child(3) .cover{
+                background-image: linear-gradient(to top, rgba(#ffff00, 0.7), transparent);
+            }
+        }
+
+    }
+
+    .more-games{
+        @include btnstyle;
+        border-color: $pink-neon;
+        margin-top: 1.8em;
+
+        i{
+            vertical-align: middle;
+        }
+        
+         &:hover{
+             background-color: rgba($pink-neon, 0.3);
+         }
+    }
+}

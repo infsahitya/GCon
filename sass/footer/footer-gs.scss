@@ -1,0 +1,92 @@
+@import "../animations";
+@import "../mixins";
+@import "../vars";
+
+.footer{
+    position: relative;
+    width: 100%;
+    @include flex(center, center, column);
+
+    .subscribe{
+        position: relative;
+        width: 100%;
+        padding: 4em 0;
+        @include flex(center, center, column);
+        background-color: $purple-dark;
+        color: #fff;
+        @include txtfont;
+
+        h2{
+            font-size: 3em;
+            color: $blue-neon;
+        }
+        h4{
+            margin-top: -0.5em;
+            color: $pink-neon;
+            font-size: 1.8em;
+        }
+        
+        form{
+            position: relative;
+            width: 30em;
+            margin-top: 1em;
+            background-color: #fff;
+            border-radius: 25px;
+            padding: 0.3em;
+
+            .input-area{
+                width: 100%;
+                @include flex(center, center);
+                
+                input[type="email"]{
+                    width: 75%;
+                    padding: 0.6em 1em;
+                    outline: none;
+                    border: none;
+                    border-radius: 20px;
+                    font-size: 1.1em;
+                }
+                input[type="submit"]{
+                    width: 25%;
+                    border-radius: 20px;
+                    background-color: $pink-neon;
+                    border: none;
+                    outline: none;
+                    padding: 0.6em 0.7em;
+                    color: #fff;
+                    font-size: 1.1em;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .logo{
+        position: relative;
+        width: 100%;
+        padding: 3em 0;
+        background-color: #000;
+        @include flex(center, center);
+
+        h1{
+            @include titlefont;
+            font-size: 7em;
+            color: #fff;
+        }
+    }
+
+    .copyright{
+        position: relative;
+        width: 100%;
+        @include flex(center, center);
+        background-color: #000;
+        padding-bottom: 2em;
+        color: darken(#fff, 20%);
+        @include txtfont;
+
+        a{
+            text-decoration: none;
+            color: $blue-neon;
+        }
+    }
+}

@@ -1,0 +1,70 @@
+@import "../vars";
+@import "../mixins";
+@import "../animations";
+
+.contact{
+    @include contdivstyle;
+    @include flex(center, center, column);
+    background-color: #000;
+
+    .intro{
+        @include introstyle;
+    }
+
+    .contact-box{
+        position: relative;
+        width: 40em;
+        
+
+        form{
+            position: relative;
+            width: 100%;
+            @include flex(center, center, row, wrap);
+            gap: 0.5em;
+
+            input{
+                width: 100%;
+                outline: none;
+                border: 1px solid $blue-neon;
+                background: transparent;
+                @include txtfont;
+                font-size: 1.3em;
+                color: #fff;
+                padding: 0.5em 1em;
+                transition: all 0.5s ease;
+
+                &:focus{
+                    border: 1px solid $pink-neon;
+                }
+            }
+            textarea{
+                width: 100%;
+                outline: none;
+                border: 1px solid $blue-neon;
+                background: transparent;
+                @include txtfont;
+                font-size: 1.5em;
+                color: #fff;
+                padding: 0.5em 1em;
+                resize: vertical;
+                transition: all 0.5s ease;
+                height: 10em;
+
+                &:focus{
+                    border: 1px solid $pink-neon;
+                }
+            }
+            
+            input[type="submit"]{
+                border: none;
+                outline: none;
+                background-color: $pink-neon;
+                cursor: pointer;
+
+                &:hover{
+                    background-color: darken($pink-neon, 10%);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,81 @@
+@import "../mixins";
+@import "../vars";
+@import "../animations";
+
+.header{
+    position: fixed;
+    width: 100%;
+    @include flex(center, center, column);
+    z-index: 10;
+    transition: all 0.5s ease;
+
+    .news-banner{
+        position: relative;
+        @include flex(center, center);
+        width: 100%;
+        height: 2.5em;
+        @include txtfont;
+
+        i{
+            margin: 0 0.5em;
+            color: red;
+            font-size: 1.5em;
+            transition: all 0.5s ease;
+        }
+        p{
+            font-size: 1.3em;
+            animation-name: bannernews;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            transition: all 0.5s ease;
+        }
+    }
+    
+    .navbar{
+        position: relative;
+        width: 100%;
+        height: 4.5em;
+        @include flex(center, center);
+        gap: 5em;
+        transition: all 0.5s ease;
+        background-color: rgba(0, 0, 0, 0.6);
+
+        .title{
+            position: relative;
+            @include titlefont;
+            color: #fff;
+            font-size: 1.7em;
+        }
+
+        .menu{
+            position: relative;
+            @include flex(center, center);
+            gap: 1.5em;
+
+            a{
+                @include hlstyle;
+                color: #fff;
+                @include txtfont;
+                font-size: 1.3em;
+                cursor: pointer;
+                padding: 0.6em 0;
+                transition: all 0.3s ease;
+
+                &:hover{
+                    color: $blue-neon;
+                }
+            }
+        }
+
+        .nav-book-btn{
+            @include hlstyle;
+
+            button{ 
+                @include btnstyle;
+                border-color: $pink-neon;
+                font-size: 1.3em;
+            }
+        }
+    }
+}

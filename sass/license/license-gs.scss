@@ -1,0 +1,84 @@
+@import "../animations";
+@import "../mixins";
+@import "../vars";
+
+.license{
+    @include contdivstyle;
+    @include flex(center, center, column);
+    background-color: #000;
+
+    .intro{
+        @include introstyle;
+    }
+
+    .cards-container{
+        position: relative;
+        width: 100%;
+        padding: 1em 0 3em 0;
+        @include flex(center, center);
+
+        .card{
+            position: relative;
+            width: 17em;
+            padding: 1em 0;
+            background-color: $purple-dark;
+            @include flex(center, center, column);
+            transition: all 0.5s ease;     
+            cursor: pointer;  
+
+            h2{
+                @include txtfont;
+                font-size: 2em;
+                color: #fff;
+                margin-bottom: 0.3em;
+            }
+
+            .icon{
+                width: 100%;
+                margin-bottom: 1em;
+                text-align: center;
+                border-top: 1px solid transparent;
+                border-bottom: 1px solid transparent;
+                border-image: linear-gradient(to right, transparent, $pink-neon, transparent);
+                border-image-slice: 1;
+                padding: 1em 0;
+
+                i{
+                    font-size: 5em;
+                    color: $blue-neon;
+                    text-shadow: 0 3px 10px rgba($blue-neon, 0.7);
+                }
+            }
+
+            .avail, .inavail{
+                @include txtfont;
+                font-size: 1.3em;
+            }
+
+            .avail{
+                color: #00ff80;
+            }
+            .inavail{
+                text-decoration: line-through;
+                color: $red;
+            }
+        }
+        .card.premium{
+            box-shadow: 0 0 15px 0 rgba(#fff, 0.7);
+            z-index: 1;
+            transform: scale(1.05);
+        }
+        .card.premiumless{
+            box-shadow: 0 0 15px 0 rgba($blue-neon, 0.8);
+        }
+    }
+
+    .see-plans{
+        @include btnstyle;
+        border-color: $pink-neon;
+
+        &:hover{
+            background-color: rgba($pink-neon, 0.3);
+        }
+    }
+}

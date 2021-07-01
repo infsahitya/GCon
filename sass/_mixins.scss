@@ -1,0 +1,83 @@
+@import "fonts";
+
+@mixin headfontnormal{
+    font-family: 'head-font-normal';
+}
+
+@mixin headfontstyle{
+    font-family: 'head-font-style';
+}
+
+@mixin herofont{
+    font-family: 'hero-font';
+}
+
+@mixin txtfont{
+    font-family: 'txt-font';
+}
+
+@mixin titlefont{
+    font-family: 'title-font';
+}
+
+
+@mixin flex($align-items, $justify-content, $flex-direction: row, $flex-wrap: nowrap){
+    display: flex;
+    align-items: $align-items;
+    justify-content: $justify-content;
+    flex-flow: $flex-direction $flex-wrap;
+}
+
+@mixin btnstyle {
+    border: none;
+    outline: none;
+    background: transparent;
+    border: 2px solid transparent;
+    @include txtfont;
+    padding: 0.3em 1.5em;
+    cursor: pointer;
+    font-size: 1.4em;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    color: #fff;
+}
+
+@mixin hlstyle {
+    position: relative;
+    text-decoration: none;
+    display: block;
+}
+
+@mixin contdivstyle{
+    position: relative;
+    width: 100%;
+    padding: 4em 0;
+}
+
+@mixin introstyle{
+    position: relative;
+        width: 100%;
+        @include flex(flex-start, center, column);
+        color: #fff;
+        padding: 0 3.5em;
+        line-height: 1.9em;
+        margin-bottom: 1.8em;
+
+        h4{
+            @include txtfont;
+            color: rgba($blue-neon, 0.8);
+            font-size: 1.7em;
+            hr{
+                display: inline-block;
+                vertical-align: middle;
+                width: 70px;
+                border: 1px solid rgba($blue-neon, 0.8);
+            }
+        }
+
+        h1{
+            color: rgba($pink-neon, 0.9);
+            @include txtfont;
+            font-size: 2.7em;
+        }
+}

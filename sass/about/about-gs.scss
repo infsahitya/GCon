@@ -1,0 +1,113 @@
+@import "../animations";
+@import "../mixins";
+@import "../vars";
+
+.about{
+    @include contdivstyle;
+    padding: 0;
+    background-image: url(../../../img/about/background.jpg);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    .wrapper{
+        position: relative;
+        padding: 4em 0;
+        @include flex(center, center);
+        background: rgba(0, 0, 0, 0.75);
+
+        .txt-container{
+            position: relative;
+            width: 35em;
+            color: #fff;
+
+            h2{
+                @include headfontnormal;
+                font-size: 2em;
+            }
+            h4{
+                font-size: 1.4em;
+                @include txtfont;
+            }
+            p{
+                @include txtfont;
+            }
+
+            .points{
+                position: relative;
+                width: 100%;
+                margin: 1em 0 1em 0;
+                font-size: 1.3em;
+                @include flex(flex-start, center, column);
+                gap: 0.3em;
+
+                p{
+                    i{
+                        font-size: 0.8em;
+                        color: $pink-neon;
+                    }
+                }
+            }
+
+            .endline{
+                font-size: 1.3em;
+            }
+
+        }
+        .img-container{
+            position: relative;
+            width: 35em;
+            @include flex(center, center);
+            
+            img{
+                width: calc(100% - 1em);
+                height: calc(100% - 1em);
+                object-fit: cover;
+                border: 5px solid rgba(0, 0, 0, 0.5);
+                transition: all 0.5s ease;
+            }
+            
+            &::before{
+                position: absolute;
+                content: '';
+                top: 35px;
+                left: 35px;
+                width: 4em;
+                height: 4em;
+                border: 5px solid darken($pink-neon, 10%);
+                border-bottom: none;
+                border-right: none;
+                transition: all 0.5s ease;
+            }
+            &::after{
+                position: absolute;
+                content: '';
+                bottom: 35px;
+                right: 35px;
+                width: 4em;
+                height: 4em;
+                border: 5px solid darken($pink-neon, 10%);
+                border-left: none;
+                border-top: none;
+                transition: all 0.5s ease;
+            }
+
+            &:hover{
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+
+                &::before{
+                    top: 15px;
+                    left: 15px;
+                }
+                &::after{
+                    bottom: 15px;
+                    right: 15px;
+                }
+            }
+        }
+    }
+}

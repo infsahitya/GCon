@@ -1,0 +1,25 @@
+@import "vars";
+@import "mixins";
+
+@keyframes bannernews {
+    0%{
+        color: #fff;
+    }
+    50%{
+       color: $red; 
+    }
+    100%{
+        color: #fff;
+    }
+}
+
+@keyframes hero-play-btn-animate {
+    from{
+        width: calc(4em - 3px);
+        height: calc(4em - 3px);
+    }
+    to{
+        width: calc(5.5em + 3px);
+        height: calc(5.5em + 3px);
+    }
+}
