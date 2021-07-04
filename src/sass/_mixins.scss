@@ -61,28 +61,37 @@
 
 @mixin introstyle{
     position: relative;
-        width: 100%;
-        @include flex(flex-start, center, column);
-        color: #fff;
-        padding: 0 3.5em;
-        line-height: 1.9em;
-        margin-bottom: 1.8em;
-
-        h4{
-            @include txtfont;
-            color: rgba($blue-neon, 0.8);
-            font-size: 1.7em;
-            hr{
-                display: inline-block;
-                vertical-align: middle;
-                width: 70px;
-                border: 1px solid rgba($blue-neon, 0.8);
-            }
+    width: 100%;
+    @include flex(flex-start, center, column);
+    color: #fff;
+    padding: 0 3.5em;
+    line-height: 1.9em;
+    margin-bottom: 1.8em;
+    h4{
+        @include txtfont;
+        color: rgba($blue-neon, 0.8);
+        font-size: 1.7em;
+        hr{
+            display: inline-block;
+            vertical-align: middle;
+            width: 70px;
+            border: 1px solid rgba($blue-neon, 0.8);
         }
+    }
+    h1{
+        color: rgba($pink-neon, 0.9);
+        @include txtfont;
+        font-size: 2.7em;
+    }
+}
 
-        h1{
-            color: rgba($pink-neon, 0.9);
-            @include txtfont;
-            font-size: 2.7em;
-        }
+@mixin sm-introstyle{
+    padding: 0 1.5em;
+    line-height: 1.5em;
+    h4{
+        font-size: 1.4em;
+    }
+    h1{
+        font-size: 1.7em;
+    }
 }

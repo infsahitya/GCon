@@ -22,17 +22,16 @@
             overflow: hidden;
             width: 23em;
             height: 18em;
-            border-radius: 10px;
             cursor: pointer;
-            border: 5px solid rgba(#fff, 0.9);
             box-shadow: none;
             transition: all 0.5s ease;
+            box-shadow: 0 0 15px rgba(#000, 0.8),
+                        0 0 15px rgba($blue-neon, 0.8);
     
             img{
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
-                border-radius: 6px;
                 transition: all 0.5s ease;
             }
     
@@ -42,7 +41,6 @@
                 height: 100%;
                 top: 0;
                 left: 0;
-                border-radius: 6px;
                 padding: 0 2em;
                 opacity: 0;
                 transition: all 0.5s ease;
@@ -52,17 +50,15 @@
                     bottom: 0;
                     @include headfontnormal;
                     font-size: 2.5em;
-                    text-shadow: 0 3px 5px rgba(#000, 0.5);
+                    color: #fff;
+                    text-shadow: 0 3px 5px rgba(#000, 0.8);
                     transition: all 0.5s ease;
                 }
             }
 
             &:hover{
-                box-shadow: 1px 1px 5px 0 rgba($blue-neon, 0.9),
-                            -1px -1px 5px 0 rgba($pink-neon, 0.9),
-                            -1px 1px 5px 0 rgba(#7a93cd, 0.5),
-                            1px -1px 5px 0 rgba(#7a93cd, 0.5);
-                border-color: #fff;
+                box-shadow: 0 0 15px rgba(#000, 0.8), 
+                            0 0 15px rgba($pink-neon, 0.5);
                 img{
                     transform: scale(1.07);
                 }
@@ -75,15 +71,15 @@
             }
 
             &:nth-child(1) .cover{
-                background-image: linear-gradient(to top, rgba(#0080ff, 0.7), transparent);
+                background-image: linear-gradient(to top, rgba(#0080ff, 0.5), transparent);
             }
 
             &:nth-child(2) .cover{
-                background-image: linear-gradient(to top, rgba(#993333, 0.7), transparent);
+                background-image: linear-gradient(to top, rgba(#993333, 0.5), transparent);
             }
 
             &:nth-child(3) .cover{
-                background-image: linear-gradient(to top, rgba(#ffff00, 0.7), transparent);
+                background-image: linear-gradient(to top, rgba(#ffff00, 0.5), transparent);
             }
         }
 

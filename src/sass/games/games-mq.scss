@@ -1,3 +1,51 @@
-@import "../animations";
 @import "../mixins";
 @import "../vars";
+
+@media only screen and (max-width: 1100px){
+    .games{
+        .cards-container{
+            flex-wrap: wrap;
+        }
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .games{
+        padding: 3em 0;
+        .intro{
+            @include sm-introstyle;
+        }
+        .cards-container{
+            padding: 0 1.5em;
+
+            .card{
+                .cover{
+                    padding: 0 1.5em;
+                    opacity: 1;
+                    h1{
+                        bottom: 0.5em;
+                        font-size: 1.8em;                        
+                    }
+                }
+
+                &:nth-child(1) .cover{
+                    background-image: linear-gradient(to top, rgba(#0080ff, 0.5), transparent);
+                }
+    
+                &:nth-child(2) .cover{
+                    background-image: linear-gradient(to top, rgba(#993333, 0.5), transparent);
+                }
+    
+                &:nth-child(3) .cover{
+                    background-image: linear-gradient(to top, rgba(#ffff00, 0.5), transparent);
+                }
+
+                &:hover{
+                    img{
+                        transform: scale(1);
+                    }
+                }
+            }
+        }
+    }
+}
