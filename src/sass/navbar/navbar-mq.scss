@@ -13,18 +13,7 @@
             }
             
             .nav-menu-open-btn{
-                position: relative;
-                border: none;
-                outline: none;
-                background: transparent;
-                width: 2em;
-                height: 2em;
                 @include flex(center, center);
-                gap: 0.5em;
-                border: $pink-neon;
-                cursor: pointer;
-                color: $pink-neon;
-                font-size: 2em;
             }
         }
     }

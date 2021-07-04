@@ -1,4 +1,21 @@
+var body = document.getElementsByTagName("body")[0];
 window.onscroll = function () { headerscrollfunction() };
+
+var sidemenu_open_btn = document.getElementById("nav-menu-open-btn");
+var sidemenu_close_btn = document.getElementById("nav-menu-close-btn");
+var sidemenu = document.getElementById("sidemenu");
+var blackcover = document.getElementById("black-cover");
+sidemenu_open_btn.addEventListener('click', function () {
+    sidemenu.style.transform = "translateX(0)";
+    blackcover.className += " active";
+    body.style.overflowY = "hidden";
+});
+sidemenu_close_btn.addEventListener('click', function () {
+    sidemenu.style.transform = "translateX(100%)";
+    blackcover.className = "black-cover";
+    body.style.overflowY = "scroll";
+});
+
 
 var header = document.getElementById("header");
 var navbar = document.getElementById("navbar");
@@ -18,10 +35,10 @@ var about_imgcontainer = document.getElementById("about-img-container");
 about_imgcontainer.style.height = about_txtcontainer.offsetHeight + "px";
 
 
-document.addEventListener( 'DOMContentLoaded', function () {
-    new Splide( '#splide', {
-        type   : 'loop',
+document.addEventListener('DOMContentLoaded', function () {
+    new Splide('#splide', {
+        type: 'loop',
         perPage: 3,
-        perMove: 1,
-    } ).mount();
-} );
+        perMove: 3,
+    }).mount();
+});

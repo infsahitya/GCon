@@ -42,6 +42,7 @@
 
     body {
         height: 100vh;
+        overflow-x: hidden;
     }
 </style>
 
@@ -80,7 +81,7 @@
                 </button>
             </a>
 
-            <button class="nav-menu-open-btn">
+            <button class="nav-menu-open-btn" id="nav-menu-open-btn">
                 <i class="fal fa-bars"></i>
             </button>
 
@@ -88,9 +89,10 @@
 
     </div>
 
-    <div class="side-menu">
+    <div class="black-cover" id="black-cover"></div>
+    <div class="side-menu active" id="sidemenu">
 
-        <button class="nav-menu-close-btn">
+        <button class="nav-menu-close-btn" id="nav-menu-close-btn">
             <i class="fal fa-times"></i>
         </button>
 
