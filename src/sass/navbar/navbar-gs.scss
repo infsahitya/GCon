@@ -83,3 +83,49 @@
         }
     }
 }
+
+.side-menu{
+    display: none;
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 20em;
+    background-color: #fff;
+    z-index: 1000;
+    transition: all 1s ease;
+    background-color: rgba($purple-dark, 0.9);
+    padding-top: 3em;
+    transform: translateX(100%);
+
+    .nav-menu-close-btn{
+        position: absolute;
+        top: 0;
+        right: 0;
+        border: none;
+        outline: none;
+        background: transparent;
+        color: $pink-neon;
+        font-size: 1.7em;
+        cursor: pointer;
+        margin: 0.2em 0.5em 0 0;
+    }
+
+    ul{
+        position: relative;
+        @include flex(center, center, column);
+        list-style-type: none;
+
+        li{
+            width: 100%;
+            @include flex(center, center);
+            padding: 0.5em 0;
+            a{
+                @include hlstyle;
+                color: #fff;
+                @include txtfont;
+                font-size: 1.5em;
+                padding: 0 2em;
+            }
+        }
+    }
+}
