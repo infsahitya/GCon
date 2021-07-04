@@ -38,7 +38,7 @@ about_imgcontainer.style.height = about_txtcontainer.offsetHeight + "px";
 document.addEventListener('DOMContentLoaded', function () {
     new Splide('#splide', {
         type: 'loop',
-        perPage: 3,
+        perPage: 1,
         perMove: 1,
     }).mount();
 });
