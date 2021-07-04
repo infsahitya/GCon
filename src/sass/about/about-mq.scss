@@ -1,3 +1,51 @@
-@import "../animations";
 @import "../mixins";
 @import "../vars";
+
+@media only screen and (max-width: 1100px){
+    .about{
+        .wrapper{
+            .img-container{
+                width: 40vw !important;
+                height: 40vw !important;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 850px){
+    .about{
+        .wrapper{
+            @include flex(center, center, column);
+            gap: 1em;
+
+            .img-container{
+                height: 18em !important;
+                width: 35em !important;
+                img{
+                    width: 100% !important;
+                    height: 100% !important;
+                }
+
+                &::before{
+                    left: 16px;
+                    top: 15px;
+                }
+                &::after{
+                    right: 16px;
+                    bottom: 15px;
+                }
+
+                &:hover{
+                    &::before{
+                        top: 15px;
+                        left: 16px;
+                    }
+                    &::after{
+                        bottom: 15px;
+                        right: 16px;
+                    }
+                }
+            }
+        }
+    }
+}

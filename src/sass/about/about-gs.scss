@@ -1,4 +1,3 @@
-@import "../animations";
 @import "../mixins";
 @import "../vars";
 
@@ -13,7 +12,7 @@
 
     .wrapper{
         position: relative;
-        padding: 4em 0;
+        padding: 4em 2em;
         @include flex(center, center);
         background: rgba(0, 0, 0, 0.75);
 
