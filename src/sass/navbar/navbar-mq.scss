@@ -19,7 +19,7 @@
     }
 
     .side-menu{
-        display: block;
+        @include flex(center, space-between, column); 
     }
 
 }
