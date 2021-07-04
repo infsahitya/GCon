@@ -1,3 +1,94 @@
 @import "../animations";
 @import "../mixins";
 @import "../vars";
+
+@media only screen and (max-width:1100px){
+    .hero{
+        .wrapper{
+            .txt-btn-wrapper{
+                width: 85%;
+            }
+            .hero-play-btn-wrapper{
+                width: 15%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 850px){
+    .hero{
+        .wrapper{
+            padding-top: 6em;
+            @include flex(center, center, column);
+
+            .txt-btn-wrapper{
+                @include flex(center, center, column);
+                width: 100%;
+
+                .hero-txt{
+                    @include flex(center, center, column);
+                }
+                .hero-btn{
+                @include flex(center, center);
+                }
+            }
+
+            .hero-play-btn-wrapper{
+                width: 100%;
+                @include flex(center, center);
+                margin-top: 1.5em;
+
+                .hero-play-btn{
+                    width: 4.5em;
+                    height: 4.5em;
+                    font-size: 1em;
+                    text-align: center;
+
+                    &::before{
+                        width: 3em;
+                        height: 3em;
+                    }
+
+                    &::after{
+                        width: calc(3em - 2px);
+                        height: calc(3em - 2px);
+                        border: 3px solid $pink-neon;
+
+                        animation-name: sm-hero-play-btn-animate;
+                        animation-duration: 1s;
+                        animation-timing-function: ease;
+                        animation-iteration-count: infinite;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .hero{
+        .wrapper{
+            padding: 6em 2.5em 0 2.5em;
+            .txt-btn-wrapper{
+                .hero-txt{
+                    h1{
+                        font-size: 2em;
+                        text-align: center;
+                    }
+                    h3{
+                        text-align: center;
+                        font-size: 1.5em;
+                        margin-top: 0.3em;
+                    }
+                }
+                .hero-btn{
+                    a{
+                        button{
+                            font-size: 1.2em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

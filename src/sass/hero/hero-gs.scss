@@ -18,8 +18,7 @@
         .txt-btn-wrapper{
             position: relative;
             width: 75%;
-            @include flex(flex, center, column);
-
+            @include flex(flex-start, center, column);
 
             .hero-txt{
                 position: relative;
@@ -61,46 +60,51 @@
             }
         }
 
-        .hero-play-btn{
+        .hero-play-btn-wrapper{
             position: relative;
-            overflow: hidden;
-            width: 5.5em;
-            height: 5.5em;
-            border-radius: 50%;
-            border: none;
-            outline: none;
-            font-size: 1.2em;
-            background-color: rgba($pink-neon, 0.5);
-            color: #fff;
-            @include flex(center, center);
-            cursor: pointer;
+            width: 25%;
 
-            i{
-                z-index: 1;
-            }
-
-            &::before{
-                position: absolute;
-                content: '';
-                background-color: $pink-neon;
-                width: 4em;
-                height: 4em;
-                border-radius: 50%; 
-            }
-
-            &::after{
-                position: absolute;
-                content: '';
-                background: transparent;
-                width: calc(4em - 3px);
-                height: calc(4em - 3px);
-                border: 3.5px solid $pink-neon;
+            .hero-play-btn{
+                position: relative;
+                overflow: hidden;
+                width: 5.5em;
+                height: 5.5em;
                 border-radius: 50%;
-
-                animation-name: hero-play-btn-animate;
-                animation-duration: 1s;
-                animation-timing-function: ease;
-                animation-iteration-count: infinite;
+                border: none;
+                outline: none;
+                font-size: 1.2em;
+                background-color: rgba($pink-neon, 0.5);
+                color: #fff;
+                @include flex(center, center);
+                cursor: pointer;
+    
+                i{
+                    z-index: 1;
+                }
+    
+                &::before{
+                    position: absolute;
+                    content: '';
+                    background-color: $pink-neon;
+                    width: 4em;
+                    height: 4em;
+                    border-radius: 50%; 
+                }
+    
+                &::after{
+                    position: absolute;
+                    content: '';
+                    background: transparent;
+                    width: calc(4em - 3px);
+                    height: calc(4em - 3px);
+                    border: 3.5px solid $pink-neon;
+                    border-radius: 50%;
+    
+                    animation-name: hero-play-btn-animate;
+                    animation-duration: 1s;
+                    animation-timing-function: ease;
+                    animation-iteration-count: infinite;
+                }
             }
         }
     }

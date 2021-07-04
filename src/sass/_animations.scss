@@ -23,3 +23,14 @@
         height: calc(5.5em + 3px);
     }
 }
+
+@keyframes sm-hero-play-btn-animate {
+    from{
+        width: calc(3em - 2.5px);
+        height: calc(3em - 2.5px);
+    }
+    to{
+        width: calc(4.5em + 2.5px);
+        height: calc(4.5em + 2.5px);
+    }
+}
