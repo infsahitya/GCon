@@ -1,3 +1,29 @@
-@import "../animations";
 @import "../mixins";
 @import "../vars";
+
+@media only screen and (max-width: 900px){
+    .license{
+        .cards-container{
+            @include flex(center, center, column);
+            gap: 1.5em;
+            .card{
+                box-shadow: 0 0 2px 1px rgba($blue-neon, 0.5) !important;
+            }
+            .card.premium{
+                transform: scale(1);
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .license{
+        padding: 3em 0;
+        .intro{
+            @include sm-introstyle;
+        }
+        .cards-container{
+            padding: 0 0 2em 0;
+        }
+    }
+}
