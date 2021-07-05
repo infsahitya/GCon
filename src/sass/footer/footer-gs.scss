@@ -82,6 +82,7 @@
         padding-bottom: 2em;
         color: darken(#fff, 20%);
         @include txtfont;
+        text-align: center;
 
         a{
             text-decoration: none;
