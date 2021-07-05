@@ -1,3 +1,11 @@
-@import "../animations";
 @import "../mixins";
 @import "../vars";
+
+@media only screen and (max-width: 600px){
+    .gallery{
+        padding: 3em 0;
+        .intro{
+            @include sm-introstyle;
+        }
+    }
+}
