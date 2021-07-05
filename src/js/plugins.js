@@ -39,6 +39,20 @@ document.addEventListener('DOMContentLoaded', function () {
     new Splide('#splide', {
         type: 'loop',
         perPage: 1,
-        perMove: 1,
+        perMove: 2,
+        gap: '1.5em',
+        padding: {
+            right: '1rem',
+            left : '1rem',
+        },
+        breakpoints: {
+            '950': {
+                perMove: 1,
+            }
+        },
+        focus: 'center',
+        autoWidth: true,
+        autoplay: true,
+        trimSpace: true,
     }).mount();
 });

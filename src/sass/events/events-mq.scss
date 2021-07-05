@@ -1,3 +1,19 @@
 @import "../animations";
 @import "../mixins";
 @import "../vars";
+
+@media only screen and (max-width: 600px){
+    .events{
+        padding: 3em 0;
+
+        .intro{
+            @include sm-introstyle;
+        }
+
+        .splide{
+            .splide__track{
+                padding: 0 0 0.5em 0;
+            }
+        }
+    }
+}
