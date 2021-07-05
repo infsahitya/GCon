@@ -1,3 +1,30 @@
-@import "../animations";
 @import "../mixins";
 @import "../vars";
+
+@media only screen and (max-width: 600px){
+    .footer{
+        .subscribe{
+            padding: 3em 0;
+            form{
+                width: 95vw;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 450px){
+    .footer{
+        .subscribe{
+            form{
+                .input-area{
+                    input[type="email"]{
+                        width: 65%;
+                    }
+                    input[type="submit"]{
+                        width: 35%;
+                    }
+                }
+            }
+        }
+    }
+}
