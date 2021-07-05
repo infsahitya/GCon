@@ -1,6 +1,8 @@
 var body = document.getElementsByTagName("body")[0];
 window.onscroll = function () { headerscrollfunction() };
 
+$('.parallax-window').parallax({imageSrc: 'assets/img/hero/background.jpg'});
+
 var sidemenu_open_btn = document.getElementById("nav-menu-open-btn");
 var sidemenu_close_btn = document.getElementById("nav-menu-close-btn");
 var sidemenu = document.getElementById("sidemenu");
