@@ -1,3 +1,19 @@
-@import "../animations";
 @import "../mixins";
 @import "../vars";
+
+@media only screen and (max-width: 900px){
+    .contact{
+        .contact-box{
+            width: 85vw;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .contact{
+        padding: 3em 0;
+        .intro{
+            @include sm-introstyle;
+        }
+    }
+}

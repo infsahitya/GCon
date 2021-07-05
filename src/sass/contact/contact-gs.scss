@@ -1,6 +1,5 @@
 @import "../vars";
 @import "../mixins";
-@import "../animations";
 
 .contact{
     @include contdivstyle;
@@ -14,7 +13,6 @@
     .contact-box{
         position: relative;
         width: 40em;
-        
 
         form{
             position: relative;
@@ -35,6 +33,11 @@
 
                 &:focus{
                     border: 1px solid $pink-neon;
+                }
+                
+                &:-webkit-autofill{
+                    transition: background-color 5000s ease-in-out 0s;
+                    -webkit-text-fill-color: #fff !important;
                 }
             }
             textarea{
